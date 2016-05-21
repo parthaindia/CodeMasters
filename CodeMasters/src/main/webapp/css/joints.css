@@ -1,0 +1,199 @@
+.floatbtn { margin-right: 5px; }
+
+.jc-abs { overflow: hidden; position: absolute; }
+.jc-ctr { position: relative; margin: 0 auto; }
+.jc-check.jc-na { background-color: #555; }
+.jc-vguide { width: 1px; background-color: #ccc; z-index: 400; }
+.jc-hguide { height: 1px; background-color: #ccc; z-index: 400; }
+.jc-hguide.jc-light { height: 0px; background-color: transparent; border-top: 1px dashed #ccc; }
+.jc-label, .jc-key, .jc-subkey { z-index: 700; }
+.jc-label { height: 16px; font-size: 13px; color: #fff; }
+.jc-key, .jc-subkey { color: #333; }
+.jc-key { font-size: 15px; }
+.jc-subkey { font-size: 15px; font-style: italic; color: #fff; }
+.jc-check.jc-healthy { background-color: #0a0; opacity: 0.6; }
+.jc-check.jc-affected { /* background-color: #a80; */ background-image: url('BadCheck.png'); opacity: 1.0;}
+.jc-hsep { width: 100%; height: 0px; border-top: 2px groove; margin-left: -7px; }
+.jc-updating, .jc-count.jc-updating { color: #888; }
+
+.jc-count-box { width: 100px; height: 100px; background-color: #fff; opacity: 0.8; position: absolute; padding: 5px;text-align: center; }
+.jc-count-box[data-for="tender"] { top: 10px; left: 8px; }
+.jc-count-box[data-for="swollen"] { top: 10px; left: 838px; }
+.jc-count-box[data-for="esr"] { top: 480px; left: 838px; }
+.jc-count-box[data-for="crp"] { top: 480px; left: 8px; }
+.jc-count-box > div:first-child { font-size: 20px; font-weight: bold; }
+.jc-count { font-size: 60px; color: #060; }
+.jc-count.jc-wideval { font-size: 34px; }
+.jc-count-error { display: none; font-size: 16px; color: #766; font-style: italic;padding-top: 6px; }
+
+input.jc-eval { display: none; }
+
+.jc-ctr.jc-label {
+    width: 70px;
+    background-color: #e8e8e8;
+    border-right: 1px dashed #ccc;
+    border-left: 1px dashed #ccc;
+    text-align: center;
+    padding-top: 0px;
+    height: 15px;
+    color: #333;
+}
+
+.jc-ctr.jc-label.jc-mini {
+    width: 50px;
+}
+
+.jc-check {
+    /* display: block; /* TODO: change to display on some trigger? */
+    border: 1px solid #333;
+    background-color: #fff;
+    opacity: 0.8;
+    width: 32px;
+    height: 32px;
+    z-index: 500;
+    border-radius:50%;
+}
+
+div[data-pos$=",1"].jc-check { left: 20px; }
+div[data-pos$=",2"].jc-check { left: 57px; } /* +5 */
+div[data-pos$=",3"].jc-check { left: 94px; } /* +10 */
+div[data-pos$=",4"].jc-check { left: 131px; } /* +15 */
+div[data-pos$=",5"].jc-check { left: 168px; } /* +20 */
+div[data-pos$=",6"].jc-check { left: 211px; } /* +25 */
+div[data-pos$=",7"].jc-check { left: 254px; } /* +30 */
+div[data-pos$=",8"].jc-check { left: 291px; } /* +35 */
+div[data-pos$=",9"].jc-check { left: 328px; } /* +40 */
+div[data-pos$=",10"].jc-check { left: 365px; } /* +45 */
+div[data-pos$=",11"].jc-check { left: 402px; } /* +50 */
+div[data-pos$=",d"].jc-check { left: 462px; } /* +50 */
+
+div[data-pos$=",12"].jc-check { left: 520px; }
+div[data-pos$=",13"].jc-check { left: 557px; } /* +10 */
+div[data-pos$=",14"].jc-check { left: 594px; } /* +20 */
+div[data-pos$=",15"].jc-check { left: 631px; } /* +30 */
+div[data-pos$=",16"].jc-check { left: 668px; } /* +40 */
+div[data-pos$=",17"].jc-check { left: 711px; } /* +50 */
+div[data-pos$=",18"].jc-check { left: 754px; } /* +60 */
+div[data-pos$=",19"].jc-check { left: 791px; } /* +70 */
+div[data-pos$=",20"].jc-check { left: 828px; } /* +80 */
+div[data-pos$=",21"].jc-check { left: 865px; } /* +90 */
+div[data-pos$=",22"].jc-check { left: 902px; } /* +100 */
+
+div[data-pos^="1,"].jc-check { top: 15px; }
+div[data-pos^="2,"].jc-check { top: 65px; }
+div[data-pos^="3,"].jc-check { top: 135px; }
+div[data-pos^="4,"].jc-check { top: 205px; }
+div[data-pos^="5,"].jc-check { top: 275px; }
+div[data-pos^="6,"].jc-check { top: 315px; }
+div[data-pos^="7,"].jc-check { top: 355px; }
+div[data-pos^="8,"].jc-check { top: 425px; }
+div[data-pos^="9,"].jc-check { top: 495px; }
+div[data-pos^="m,"].jc-check { top: 520px; }
+div[data-pos^="10,"].jc-check { top: 565px; }
+div[data-pos^="11,"].jc-check { top: 605px; }
+
+div[data-guide="TenderTrunk"].jc-vguide { top: 49px; left: 227px; height: 393px; }
+/* note that left & right are "reversed" -- L side of screen is R side of patient */
+div[data-guide="TenderArmRight"].jc-vguide { top: 99px; left: 147px; height: 36px; }
+div[data-guide="TenderArmLeft"].jc-vguide { top: 99px; left: 307px; height: 36px; }
+div[data-guide="TenderForearmRight"].jc-vguide { top: 169px; left: 147px; height: 36px; }
+div[data-guide="TenderForearmLeft"].jc-vguide { top: 169px; left: 307px; height: 36px; }
+div[data-guide="TenderWristRight"].jc-vguide { top: 239px; left: 147px; height: 20px; }
+div[data-guide="TenderWristLeft"].jc-vguide { top: 239px; left: 307px; height: 20px; }
+div[data-guide="TenderThighRight"].jc-vguide { top: 459px; left: 184px; height: 36px; }
+div[data-guide="TenderThighLeft"].jc-vguide { top: 459px; left: 270px; height: 36px; }
+div[data-guide="TenderShinRight"].jc-vguide { top: 529px; left: 184px; height: 36px; }
+div[data-guide="TenderShinLeft"].jc-vguide { top: 529px; left: 270px; height: 36px; }
+div[data-guide="TenderPelvis"].jc-hguide { top: 442px; left: 202px; width: 52px; }
+div[data-guide="TenderCollars"].jc-hguide { top: 81px; left: 165px; width: 126px; }
+div[data-guide="TenderHandRight"].jc-hguide { top: 259px; left: 20px; width: 182px; }
+div[data-guide="TenderHandLeft"].jc-hguide { top: 259px; left: 254px; width: 182px; }
+
+div[data-guide="SwollenTrunk"].jc-vguide { top: 49px; left: 727px; height: 393px; }
+/* note that left & right are "reversed" -- L side of screen is R side of patient */
+div[data-guide="SwollenArmRight"].jc-vguide { top: 99px; left: 647px; height: 36px; }
+div[data-guide="SwollenArmLeft"].jc-vguide { top: 99px; left: 807px; height: 36px; }
+div[data-guide="SwollenForearmRight"].jc-vguide { top: 169px; left: 647px; height: 36px; }
+div[data-guide="SwollenForearmLeft"].jc-vguide { top: 169px; left: 807px; height: 36px; }
+div[data-guide="SwollenWristRight"].jc-vguide { top: 239px; left: 647px; height: 20px; }
+div[data-guide="SwollenWristLeft"].jc-vguide { top: 239px; left: 807px; height: 20px; }
+div[data-guide="SwollenThighRight"].jc-vguide { top: 459px; left: 684px; height: 36px; }
+div[data-guide="SwollenThighLeft"].jc-vguide { top: 459px; left: 770px; height: 36px; }
+div[data-guide="SwollenShinRight"].jc-vguide { top: 529px; left: 684px; height: 36px; }
+div[data-guide="SwollenShinLeft"].jc-vguide { top: 529px; left: 770px; height: 36px; }
+div[data-guide="SwollenPelvis"].jc-hguide { top: 442px; left: 702px; width: 52px; }
+div[data-guide="SwollenCollars"].jc-hguide { top: 81px; left: 665px; width: 126px; }
+div[data-guide="SwollenHandRight"].jc-hguide { top: 259px; left: 520px; width: 182px; }
+div[data-guide="SwollenHandLeft"].jc-hguide { top: 259px; left: 754px; width: 182px; }
+
+div[data-label^="UprTenderD"].jc-label, div[data-label^="UprSwollenD"].jc-label { top: 260px; }
+div[data-label^="LwrTenderD"].jc-label, div[data-label^="LwrSwollenD"].jc-label { top: 638px; }
+
+div[data-label$="TenderD5Left"].jc-label { left: 34px; }
+div[data-label$="TenderD4Left"].jc-label { left: 71px; }
+div[data-label$="TenderD3Left"].jc-label { left: 108px; }
+div[data-label$="TenderD2Left"].jc-label { left: 144px; }
+div[data-label$="TenderD1Left"].jc-label { left: 181px; }
+div[data-label$="TenderD1Right"].jc-label { left: 267px; }
+div[data-label$="TenderD2Right"].jc-label { left: 304px; }
+div[data-label$="TenderD3Right"].jc-label { left: 341px; }
+div[data-label$="TenderD4Right"].jc-label { left: 378px; }
+div[data-label$="TenderD5Right"].jc-label { left: 415px; }
+
+div[data-label$="SwollenD5Left"].jc-label { left: 534px; }
+div[data-label$="SwollenD4Left"].jc-label { left: 571px; }
+div[data-label$="SwollenD3Left"].jc-label { left: 608px; }
+div[data-label$="SwollenD2Left"].jc-label { left: 644px; }
+div[data-label$="SwollenD1Left"].jc-label { left: 681px; }
+div[data-label$="SwollenD1Right"].jc-label { left: 767px; }
+div[data-label$="SwollenD2Right"].jc-label { left: 804px; }
+div[data-label$="SwollenD3Right"].jc-label { left: 841px; }
+div[data-label$="SwollenD4Right"].jc-label { left: 878px; }
+div[data-label$="SwollenD5Right"].jc-label { left: 915px; }
+
+div[data-label="Neck"].jc-label { top: 18px; }
+div[data-guide="Neck"].jc-hguide { top: 32px; left: 245px; width: 466px; }
+
+div[data-label="Shoulders"].jc-label { top: 55px; }
+div[data-guide="Shoulders"].jc-hguide { top: 81px; left: 325px; width: 305px; }
+
+div[data-label="Elbows"].jc-label { top: 109px; }
+div[data-guide="Elbows"].jc-hguide { top: 152px; left: 325px; width: 305px; }
+
+div[data-label="Wrists"].jc-label { top: 163px; }
+div[data-guide="Wrists"].jc-hguide { top: 222px; left: 325px; width: 305px; }
+
+div[data-label="MCPs"].jc-label { top: 217px; }
+div[data-guide="MCPs"].jc-hguide { top: 292px; left: 436px; width: 84px; }
+
+div[data-label="PIPs"].jc-label { top: 242px; }
+div[data-guide="PIPs"].jc-hguide { top: 332px; left: 436px; width: 84px; }
+
+div[data-label="DIPs"].jc-label { top: 267px; }
+div[data-guide="DIPs"].jc-hguide { top: 372px; left: 436px; width: 84px; }
+
+div[data-label="Hips"].jc-label { top: 322px; }
+div[data-guide="Hips"].jc-hguide { top: 442px; left: 285px; width: 385px; }
+
+div[data-label="Knees"].jc-label { top: 377px; }
+div[data-guide="Knees"].jc-hguide { top: 512px; left: 285px; width: 385px; }
+
+div[data-label="Ankles"].jc-label { top: 392px; }
+div[data-guide="Ankles"].jc-hguide { top: 582px; left: 285px; width: 385px; }
+
+div[data-label="MTPs"].jc-label { top: 417px; }
+div[data-guide="MTPs"].jc-hguide { top: 622px; left: 436px; width: 84px; }
+
+div[data-key="NJA"].jc-key { top: 400px; left: 350px; background-color: transparent;color: #fff; font-size: 30px; }
+div[data-key="Tender"].jc-key { top: 654px; left: 179px; background-color: transparent;color: #fff; font-size: 30px; }
+div[data-key="Swollen"].jc-key { top: 654px; left: 672px; background-color: transparent;color: #fff; font-size: 30px; }
+div[data-key="TenderRight"].jc-subkey { top: 390px; left: 72px; }
+div[data-key="TenderLeft"].jc-subkey { top: 390px; left: 350px;padding-right: 2px; }
+div[data-key="SwollenRight"].jc-subkey { top: 390px; left: 572px; }
+div[data-key="SwollenLeft"].jc-subkey { top: 390px; left: 850px;padding-right: 2px; }
+
+div#numsep { bottom: 36px; display: none; }
+div#metrics { bottom: 0px; left: 80px; width: 900px; height: 31px; }
+div#metrics .ui-grid-a { width: 825px; margin: 0 auto; }
+div#metrics .ui-block-a,  div#metrics .ui-block-b, div#metrics .ui-block-c { width: 270px; }
+div#metrics .jc-metric { padding: 5px; }
